@@ -3,4 +3,5 @@ from imall import models
 
 # Register your models here.
 admin.site.register(models.USERPROFILE)
+admin.site.register(models.Product)
 

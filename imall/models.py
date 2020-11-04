@@ -61,5 +61,17 @@ class USERPROFILE(AbstractBaseUser, PermissionsMixin):
         return self.email
 
 
+class Product(models.Model):
+
+    Product_id = models.AutoField(primary_key=True)
+    Product_name = models.CharField(max_length=255, default="")
+    Product_desc = models.CharField(max_length=500, default="")
+    Product_price = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.Product_name
+
+
+
 
 
