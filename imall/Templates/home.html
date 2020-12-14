@@ -1,0 +1,16 @@
+{% extends 'basic.html' %}
+{% block body %}
+<div class="container mt-3">
+    {% for i in all_prods %}
+    <div class="card" style="width: 18rem;">
+        <img src="/media/{{i.product_image}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{i.Product_name}}</h5>
+            <p class="card-text">{{i.Product_desc}}</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}

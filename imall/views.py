@@ -14,7 +14,16 @@ from imall.models import USERPROFILE, Product
 
 
 # Create your views here.
-def basic(request):
+
+def home(request):
+    """ This function will handle home page related items"""
+    all_prods = Product.objects.all()
+
+    params = {'all_prods': all_prods}
+    return render(request, 'home.html', params)
+
+
+def handlesignup(request):
     """Create a new user using custom user model we created using below function"""
     USER = USERPROFILE.objects.all()
     if request.method == "POST":
@@ -30,9 +39,9 @@ def basic(request):
         newuser = USERPROFILE.objects.create_user(email=email, name=name, password=password)
         messages.success(request, "Your registeration has been successfull. Please login!")
         return redirect("mall:home")
+    else:
+        return HttpResponse('404 - Not found')
 
-            
-    return render(request, 'basic.html')
 
 def handlelogin(request):
     if request.method == "POST":
@@ -54,7 +63,23 @@ def handlelogout(request):
     logout(request)
     messages.success(request, "Your have successfully logged out")
     return redirect("mall:home")
-    return HttpResponse('404 - Not found')
+
+
+def about(request):
+    return render(request, 'aboutus.html')
+
+
+    
+def cart(request):
+    return render(request, 'cart.html')
+
+
+
+def orders(request):
+    return render(request, 'orderstatus.html')
+
+
+
 
 
 

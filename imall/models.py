@@ -62,11 +62,17 @@ class USERPROFILE(AbstractBaseUser, PermissionsMixin):
 
 
 class Product(models.Model):
+    """This class is for Product properties"""
 
     Product_id = models.AutoField(primary_key=True)
     Product_name = models.CharField(max_length=255, default="")
+    product_category = models.CharField(max_length=255, default="")
     Product_desc = models.CharField(max_length=500, default="")
     Product_price = models.IntegerField(default=0)
+    Product_mrp = models.IntegerField(default=0)
+    discount_amount = models.IntegerField(default=0)
+    discount_per = models.IntegerField(default=0)
+    product_image = models.ImageField(upload_to='imall/images', default="")
 
     def __str__(self):
         return self.Product_name
