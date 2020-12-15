@@ -2,10 +2,10 @@ from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from imall.models import USERPROFILE, Product
+from math import ceil
 
 # from django.contrib.auth.models import User
 # from django.contrib.auth import authenticate, login, logout
-# from math import ceil
 # import json
 
 
@@ -18,8 +18,9 @@ from imall.models import USERPROFILE, Product
 def home(request):
     """ This function will handle home page related items"""
     all_prods = Product.objects.all()
-
-    params = {'all_prods': all_prods}
+    n = len(all_prods)
+    nSlides = n//4 + ceil((n/4)-(n//4))
+    params = {'no_slides': nSlides, 'range': range(1,nSlides), 'all_prods': all_prods}
     return render(request, 'home.html', params)
 
 
@@ -50,7 +51,7 @@ def handlelogin(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, "Your login is successfull. Happy Shopping!")
+            messages.success(request, "Your login is successful. Happy Shopping!")
             return redirect("mall:home")
         else:
             messages.error(request, "Invalid id or password")

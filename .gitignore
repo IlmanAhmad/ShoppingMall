@@ -1,0 +1,4 @@
+# Specific files #
+##################
+shoppingmall/settings.py
+db.sqlite3
