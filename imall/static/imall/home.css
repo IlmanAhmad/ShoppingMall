@@ -1,0 +1,37 @@
+.col-md-3 {
+    display :inline-block;
+    margin : -4px;
+
+}
+.carousel-indicators .active {
+    background-color: red;
+}
+
+.col-md-3 img {
+
+    max-width: 227px;
+    height: 242px;
+}
+
+body .carousel-indicator li {
+    background-color: blue;
+}
+
+
+body .carousel-indicators {
+    bottom: 0;
+}
+
+
+body .carousel-control-prev-icon,
+body .carousel-control-next-icon {
+    background-color: red;
+    position: fixed;
+    
+}
+
+
+
+body .no-padding {
+        padding-left: 0,
+}
