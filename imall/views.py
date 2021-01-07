@@ -9,12 +9,6 @@ from math import ceil
 # import json
 
 
-
-
-
-
-# Create your views here.
-
 def home(request):
     """ This function will handle home page related items"""
     all_prods = Product.objects.all()
@@ -45,6 +39,7 @@ def handlesignup(request):
 
 
 def handlelogin(request):
+    """function to handle login authentication"""
     if request.method == "POST":
         email = request.POST.get('email', '')
         password = request.POST.get('password', '')
@@ -61,6 +56,7 @@ def handlelogin(request):
 
 
 def handlelogout(request):
+    """function to handle logout request"""
     logout(request)
     messages.success(request, "Your have successfully logged out")
     return redirect("mall:home")

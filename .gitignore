@@ -1,4 +1,7 @@
 # Specific files #
 ##################
 shoppingmall/settings.py
+shoppingmall/imall/static/imall/home_backup.css
+shoppingmall/imall/Templates/basic_backup.html
+shoppingmall/imall/Templates/home_backup.html
 db.sqlite3

@@ -1,36 +1,27 @@
-.col-md-3 {
-    display :inline-block;
-    margin : -4px;
 
-}
-.carousel-indicators .active {
-    background-color: red;
-}
-
-.col-md-3 img {
-
+    .col-md-3 {
+    display: inline-block;
+    margin-left: -4px;
+    }
+    .carousel-indicators .active {
+    background-color: green;
+    }
+    .col-md-3 img {
     max-width: 227px;
     height: 242px;
-}
-
-body .carousel-indicator li {
-    background-color: blue;
-}
-
-
-body .carousel-indicators {
+    }
+    body .carousel-indicators li {
+    background-color: green;
+    }
+    .carousel-indicators {
     bottom: 0;
-}
-
-
-body .carousel-control-prev-icon,
-body .carousel-control-next-icon {
-    background-color: red;
+    }
+    body .carousel-control-prev-icon,
+    body .carousel-control-next-icon {
+    background-color: green;
+    }
     
-}
-
-
-body .no-padding {
-        padding-left: 0;
-        padding-right: 0;
-}
+    body .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+    }

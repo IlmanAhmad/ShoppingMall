@@ -1,0 +1,23 @@
+.col-md-3 {
+    display: inline-block;
+    margin-left: -4px;
+}
+
+.col-md-3 img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-indicators li {
+    background-color: green;
+}
+
+body .carousel-control-prev-icon1 
+body .carousel-control-next-icon1 {
+    background-color: green;
+}
+
+body .no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
